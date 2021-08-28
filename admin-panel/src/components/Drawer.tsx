@@ -17,8 +17,8 @@ import { faCircle, faHome } from "@fortawesome/free-solid-svg-icons";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 
 import { ReactComponent as Logo } from "../assets/logo.svg";
-import { useStyles } from "../styles";
 import { MainListItems, SecondaryListItems, ThirdListItems } from "./ListItems";
+import { useStyles } from "./Drawer.styles";
 
 interface Props {
   open: boolean;
