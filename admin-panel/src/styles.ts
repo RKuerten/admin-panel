@@ -12,9 +12,12 @@ export const useStyles = makeStyles((theme) => ({
   toolbarIcon: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "flex-end",
+    justifyContent: "space-between",
     padding: "0 8px",
     ...theme.mixins.toolbar,
+  },
+  topIcon: {
+    paddingRight: theme.spacing(2),
   },
   formControl: {
     margin: theme.spacing(2),
@@ -43,6 +46,9 @@ export const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    [theme.breakpoints.down("xs")]: {
+      width: 0,
+    },
   },
   menuButton: {
     marginRight: 36,
@@ -61,6 +67,9 @@ export const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    [theme.breakpoints.down("xs")]: {
+      width: "100vw",
+    },
   },
   drawerPaperClose: {
     overflowX: "hidden",
@@ -69,9 +78,6 @@ export const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     width: theme.spacing(6) + 4,
-    /* [theme.breakpoints.up("sm")]: {
-      width: theme.spacing(6),
-    }, */
   },
   appBarSpacer: theme.mixins.toolbar,
   content: {
@@ -92,4 +98,9 @@ export const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 240,
   },
+  pagination: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+  }
 }));

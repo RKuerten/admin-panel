@@ -1,11 +1,46 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+
+import "./index.css";
+import App from "./App";
+import { CssBaseline } from "@material-ui/core";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#0052CC",
+      dark: "#091E42",
+    },
+    secondary: {
+      main: "#FF000A",
+    },
+  },
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+  overrides: {
+    MuiCssBaseline: {
+      "@global": {
+        "@font-face": [
+          {
+            fontFamily: "Montserrat",
+            fontStyle: "normal",
+            fontDisplay: "swap",
+            fontWeight: 400,
+          },
+        ],
+      },
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

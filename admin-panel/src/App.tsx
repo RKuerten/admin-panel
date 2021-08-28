@@ -5,52 +5,21 @@ import {
   Badge,
   Box,
   Container,
-  CssBaseline,
-  Divider,
-  Drawer,
-  FormControl,
   Grid,
   IconButton,
-  InputAdornment,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  NativeSelect,
   Paper,
   Toolbar,
   Typography,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faHome } from "@fortawesome/free-solid-svg-icons";
 
-import { ReactComponent as Logo } from "./assets/logo.svg";
-import {
-  mainListItems,
-  secondaryListItems,
-  thirdListItems,
-} from "./components/ListItems";
 import Chart from "./components/Chart";
 import Deposits from "./components/Deposits";
 import Orders from "./components/Orders";
+import AppDrawer from "./components/Drawer";
 import { useStyles } from "./styles";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+import { Pagination } from "@material-ui/lab";
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -65,7 +34,6 @@ export default function Dashboard() {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
       <AppBar
         position="absolute"
         className={clsx(classes.appBar, open && classes.appBarShift)}
@@ -99,55 +67,7 @@ export default function Dashboard() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant="permanent"
-        classes={{
-          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-        }}
-        open={open}
-      >
-        <div className={classes.toolbarIcon}>
-          <Logo />
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-        <Divider />
-        <FormControl className={classes.formControl}>
-          <NativeSelect
-            className={classes.selectEmpty}
-            defaultValue={"dashboard"}
-            disableUnderline
-            inputProps={{ "aria-label": "control", style: { marginLeft: 3 } }}
-            name="control"
-            variant="outlined"
-            startAdornment={
-              <InputAdornment position="start">
-                <FontAwesomeIcon
-                  icon={faHome}
-                  className={classes.selectIcon}
-                  style={{ width: 24 }}
-                />
-              </InputAdornment>
-            }
-          >
-            <option value={"dashboard"}>Dashboard</option>
-            <option value={"account"}>Account</option>
-          </NativeSelect>
-          <ListItem disableGutters button>
-            <ListItemIcon style={{ minWidth: 36 }}>
-              <FontAwesomeIcon icon={faCircle} style={{ width: 24 }} />
-            </ListItemIcon>
-            <ListItemText primary="eCommerce" />
-          </ListItem>
-        </FormControl>
-        <Divider />
-        <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
-        <Divider />
-        <List>{thirdListItems}</List>
-      </Drawer>
+      <AppDrawer open={open} handleDrawerClose={handleDrawerClose} />
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
@@ -171,8 +91,8 @@ export default function Dashboard() {
               </Paper>
             </Grid>
           </Grid>
-          <Box pt={4}>
-            <Copyright />
+          <Box pt={4} className={classes.pagination}>
+            <Pagination boundaryCount={3} count={10} defaultPage={6} color="primary" />
           </Box>
         </Container>
       </main>
