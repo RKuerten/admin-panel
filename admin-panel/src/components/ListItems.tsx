@@ -1,70 +1,117 @@
-import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import React from "react";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArchive,
+  faBorderAll,
+  faCalendar,
+  faCheckCircle,
+  faCheckSquare,
+  faColumns,
+  faCommentAlt,
+  faCopy,
+  faCreditCard,
+  faEnvelope,
+  faFileAlt,
+  faTable,
+  faTint,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const mainListItems = (
   <div>
+    <ListSubheader>APPS</ListSubheader>
     <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faEnvelope} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Email" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCommentAlt} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="Chat" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCheckSquare} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="Todo" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCalendar} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="Calendar" />
     </ListItem>
   </div>
 );
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+    <ListSubheader>UI ELEMENTS</ListSubheader>
     <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faBorderAll} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText primary="Grid" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faTint} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <ListItemText primary="Colors" />
     </ListItem>
     <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCreditCard} style={{ width: 24 }} />
       </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+      <ListItemText primary="Card" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faTable} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Table" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faArchive} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Components" />
+    </ListItem>
+  </div>
+);
+
+export const thirdListItems = (
+  <div>
+    <ListSubheader>FORMS</ListSubheader>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCopy} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Grid" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faColumns} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Colors" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faFileAlt} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Card" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon style={{ minWidth: 36 }}>
+        <FontAwesomeIcon icon={faCheckCircle} style={{ width: 24 }} />
+      </ListItemIcon>
+      <ListItemText primary="Table" />
     </ListItem>
   </div>
 );
