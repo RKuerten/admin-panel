@@ -73,10 +73,7 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "0.6rem",
   },
   menuButton: {
-    marginRight: 36,
-    [theme.breakpoints.down("xs")]: {
-      marginRight: 24,
-    },
+    marginRight: 16,
   },
   menuButtonHidden: {
     display: "none",
