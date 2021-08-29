@@ -21,92 +21,7 @@ import StarBorderIcon from "@material-ui/icons/StarBorder";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import { useStyles } from "./Filters.styles";
-
-const categories = [
-  {
-    first: "Cell Phones",
-    second: "1920",
-  },
-  {
-    first: "Computers & Tablets",
-    second: "1820",
-  },
-  {
-    first: "Cell Phone Accessories",
-    second: "462",
-  },
-  {
-    first: "Appliances",
-    second: "6556",
-  },
-  {
-    first: "Audio",
-    second: "120",
-  },
-  {
-    first: "iPhone Accessories",
-    second: "353",
-  },
-  {
-    first: "Cameras & Camcorders",
-    second: "45",
-  },
-  {
-    first: "iPhone Cases & Clips",
-    second: "456",
-  },
-  {
-    first: "TV & Home Theater",
-    second: "55",
-  },
-  {
-    first: "Small Kitchen Appliances",
-    second: "10",
-  },
-];
-
-const brands = [
-  {
-    first: "Insigni",
-    second: "220",
-  },
-  {
-    first: "Samsung",
-    second: "120",
-  },
-  {
-    first: "Apple",
-    second: "320",
-  },
-  {
-    first: "HP",
-    second: "32",
-  },
-  {
-    first: "Sony",
-    second: "520",
-  },
-  {
-    first: "Metra",
-    second: "55",
-  },
-  {
-    first: "Dyne",
-    second: "120",
-  },
-  {
-    first: "LG",
-    second: "98",
-  },
-  {
-    first: "Canon",
-    second: "99",
-  },
-  {
-    first: "Speck",
-    second: "575",
-  },
-];
+import { brands, categories } from "./Filters.items";
 
 export default function Filters() {
   const classes = useStyles();
@@ -219,7 +134,7 @@ export default function Filters() {
               return (
                 <div className={classes.checkBoxWrapper} key={key}>
                   <FormControlLabel
-                    control={<Checkbox name={`checked${e.first}`} />}
+                    control={<Checkbox name={e.name} />}
                     label={e.first}
                   />
                   <Typography variant="body2">{e.second}</Typography>
@@ -236,7 +151,7 @@ export default function Filters() {
               return (
                 <div className={classes.checkBoxWrapper} key={key}>
                   <FormControlLabel
-                    control={<Checkbox name={`checked${e.first}`} />}
+                    control={<Checkbox name={e.first} />}
                     label={e.first}
                   />
                   <Typography variant="body2">{e.second}</Typography>
@@ -304,10 +219,10 @@ export default function Filters() {
         </AccordionDetails>
       </Accordion>
       <Button
-        fullWidth
-        variant="contained"
         color="primary"
+        fullWidth
         style={{ marginTop: !accordion ? 16 : 0 }}
+        variant="contained"
       >
         Clear All Filters
       </Button>
