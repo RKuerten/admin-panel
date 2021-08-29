@@ -118,11 +118,12 @@ export default function Filters() {
   };
 
   return (
-    <Grid item xs={3}>
+    <Grid item xs={3} className={classes.wrapper}>
       <Typography variant="body2" gutterBottom>
         Filters
       </Typography>
       <Paper className={classes.paper}>
+        <Divider style={{ opacity: 0 }} />
         <FormControl component="fieldset" margin="dense" size="small">
           <FormLabel
             component="legend"

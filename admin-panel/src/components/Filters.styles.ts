@@ -4,6 +4,14 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
   },
+  wrapper: {
+    [theme.breakpoints.down("xs")]: {
+      minWidth: `calc(100vw - 45px)`,
+    },
+    [theme.breakpoints.down("sm")]: {
+      minWidth: 400,
+    },
+  },
   paper: {
     padding: theme.spacing(2),
     display: "flex",
