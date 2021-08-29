@@ -10,7 +10,6 @@ import {
   FormControlLabel,
   FormLabel,
   Grid,
-  Paper,
   Radio,
   RadioGroup,
   Slider,
