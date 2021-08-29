@@ -6,10 +6,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     [theme.breakpoints.down("sm")]: {
-      minWidth: 400,
+      minWidth: "calc(100vw - 65px)",
     },
     [theme.breakpoints.down("xs")]: {
-      minWidth: `calc(100vw - 45px)`,
+      minWidth: "calc(100vw - 45px)",
     },
   },
   paper: {
@@ -52,8 +52,15 @@ export const useStyles = makeStyles((theme) => ({
   starsWrapper: {
     display: "flex",
     alignItems: "center",
+    flexWrap: "wrap",
+  },
+  starsIconsWrapper: {
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "row",
+    paddingRight: theme.spacing(1),
   },
   starsText: {
-    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
 }));
