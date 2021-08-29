@@ -28,14 +28,21 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
   },
   iconWrapper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 24,
     marginLeft: theme.spacing(2),
     padding: 2,
+    width: 24,
     "&:hover": {
       backgroundColor: theme.palette.secondary.main,
       color: "white",
     },
   },
   iconColor: {
+    height: 24,
+    width: 24,
     "&:hover": {
       color: "white",
     },
