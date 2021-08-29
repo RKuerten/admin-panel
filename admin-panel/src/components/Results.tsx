@@ -119,7 +119,10 @@ export default function Results() {
       </Paper>
       {products.map((p, key) => {
         return (
-          <Paper className={classes.product} key={key}>
+          <Paper
+            className={classes.product}
+            key={key}
+          >
             <div className={classes.productInfo}>
               <img
                 alt={p.name}

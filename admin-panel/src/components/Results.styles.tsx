@@ -66,11 +66,16 @@ export const useStyles = makeStyles((theme) => ({
     flex: 0.8,
     display: "flex",
     padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   productImage: {
     maxHeight: 210,
     maxWidth: 210,
     marginRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
   },
   productDescription: {
     paddingBlock: theme.spacing(2),
@@ -92,6 +97,9 @@ export const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,
       color: theme.palette.rating.main,
+    },
+    [theme.breakpoints.down("sm")]: {
+      alignSelf: "center",
     },
   },
   productWishlist: {
