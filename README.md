@@ -8,8 +8,10 @@ Para rodar o projeto, é necessário ter instalado:
 
 Com ambos instalados, basta abrir um terminal dentro da pasta _admin-panel_ e rodar os seguintes comandos:
 
-> Para instalar os pacotes: <br /> > `yarn`
+> Para instalar os pacotes: <br /> 
+> `yarn`
 
-> Para rodar o projeto: <br /> > `yarn start`
+> Para rodar o projeto: <br /> 
+> `yarn start`
 
 Feito por [Rodrigo Kuerten](https://rodrigokuerten.com.br).
