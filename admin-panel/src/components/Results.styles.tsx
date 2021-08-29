@@ -58,6 +58,9 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+    },
   },
   productInfo: {
     flex: 0.8,
