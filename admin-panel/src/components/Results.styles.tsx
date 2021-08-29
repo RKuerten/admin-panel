@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     [theme.breakpoints.down("sm")]: {
-      minWidth: "calc(100vw - 145px)",
+      minWidth: "calc(100vw - 65px)",
     },
     [theme.breakpoints.down("xs")]: {
       minWidth: "calc(100vw - 45px)",
