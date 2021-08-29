@@ -5,11 +5,11 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   wrapper: {
-    [theme.breakpoints.down("xs")]: {
-      minWidth: `calc(100vw - 45px)`,
-    },
     [theme.breakpoints.down("sm")]: {
       minWidth: 400,
+    },
+    [theme.breakpoints.down("xs")]: {
+      minWidth: `calc(100vw - 45px)`,
     },
   },
   paper: {

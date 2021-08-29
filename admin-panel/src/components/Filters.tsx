@@ -119,7 +119,7 @@ export default function Filters() {
 
   return (
     <Grid item xs={3} className={classes.wrapper}>
-      <Typography variant="body2" gutterBottom>
+      <Typography variant="body2" gutterBottom style={{ fontWeight: 600 }}>
         Filters
       </Typography>
       <Paper className={classes.paper}>
