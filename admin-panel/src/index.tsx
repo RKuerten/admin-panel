@@ -8,10 +8,10 @@ import { CssBaseline } from "@material-ui/core";
 
 declare module "@material-ui/core/styles/createPalette" {
   interface Palette {
-    rating: Palette['primary'];
+    rating: Palette["primary"];
   }
   interface PaletteOptions {
-    rating: PaletteOptions['primary'];
+    rating: PaletteOptions["primary"];
   }
 }
 
@@ -26,7 +26,7 @@ const theme = createTheme({
     },
     rating: {
       main: "#FFAB00",
-    }
+    },
   },
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
