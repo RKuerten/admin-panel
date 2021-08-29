@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Grid,
-  Paper,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
@@ -14,6 +13,7 @@ import ContentBar from "./components/ContentBar";
 import Filters from "./components/Filters";
 import TopBar from "./components/TopBar";
 import { useStyles } from "./styles";
+import Results from "./components/Results";
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -39,9 +39,7 @@ export default function Dashboard() {
           <Grid item xs={12}>
             <Grid container justifyContent="center" spacing={4}>
               <Filters />
-              <Grid item xs={9}>
-                <Paper className={classes.paper} />
-              </Grid>
+              <Results />
             </Grid>
           </Grid>
           <Box pt={4} className={classes.pagination}>
