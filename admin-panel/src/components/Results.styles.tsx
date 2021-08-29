@@ -6,10 +6,10 @@ export const useStyles = makeStyles((theme) => ({
   },
   wrapper: {
     [theme.breakpoints.down("sm")]: {
-      minWidth: 400,
+      minWidth: "calc(100vw - 145px)",
     },
     [theme.breakpoints.down("xs")]: {
-      minWidth: `calc(100vw - 45px)`,
+      minWidth: "calc(100vw - 45px)",
     },
   },
   topWrapper: {
@@ -30,6 +30,15 @@ export const useStyles = makeStyles((theme) => ({
   iconWrapper: {
     marginLeft: theme.spacing(2),
     padding: 2,
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.main,
+      color: "white",
+    },
+  },
+  iconColor: {
+    "&:hover": {
+      color: "white",
+    },
   },
   inputWrapper: {
     padding: "2px 4px",
@@ -46,6 +55,9 @@ export const useStyles = makeStyles((theme) => ({
   product: {
     display: "flex",
     marginTop: theme.spacing(2),
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+    },
   },
   productInfo: {
     flex: 0.8,
@@ -70,7 +82,22 @@ export const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   rating: {
-    margin: theme.spacing(0, 1, 3),
     alignSelf: "flex-end",
+    backgroundColor: theme.palette.rating.main,
+    color: theme.palette.primary.dark,
+    margin: theme.spacing(0, 1, 3),
+    "&:hover": {
+      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.rating.main,
+    },
+  },
+  productWishlist: {
+    backgroundColor: "white",
+    color: theme.palette.secondary.main,
+    margin: theme.spacing(1),
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.main,
+      color: "white",
+    },
   },
 }));
