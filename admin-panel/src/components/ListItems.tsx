@@ -7,6 +7,7 @@ import {
   faCalendar,
   faCheckCircle,
   faCheckSquare,
+  faChevronRight,
   faColumns,
   faCommentAlt,
   faCopy,
@@ -90,6 +91,9 @@ export const SecondaryListItems = ({ open }: ItemProps) => {
           <FontAwesomeIcon icon={faBorderAll} style={{ width: 24 }} />
         </ListItemIcon>
         <ListItemText primary="Grid" />
+        <ListItemIcon style={{ minWidth: 36 }}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ width: 24 }} />
+        </ListItemIcon>
       </ListItem>
       <ListItem button>
         <ListItemIcon style={{ minWidth: 36 }}>
@@ -102,6 +106,9 @@ export const SecondaryListItems = ({ open }: ItemProps) => {
           <FontAwesomeIcon icon={faCreditCard} style={{ width: 24 }} />
         </ListItemIcon>
         <ListItemText primary="Card" />
+        <ListItemIcon style={{ minWidth: 36 }}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ width: 24 }} />
+        </ListItemIcon>
       </ListItem>
       <ListItem button>
         <ListItemIcon style={{ minWidth: 36 }}>
@@ -114,6 +121,9 @@ export const SecondaryListItems = ({ open }: ItemProps) => {
           <FontAwesomeIcon icon={faArchive} style={{ width: 24 }} />
         </ListItemIcon>
         <ListItemText primary="Components" />
+        <ListItemIcon style={{ minWidth: 36 }}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ width: 24 }} />
+        </ListItemIcon>
       </ListItem>
     </div>
   );
@@ -134,6 +144,9 @@ export const ThirdListItems = ({ open }: ItemProps) => {
           <FontAwesomeIcon icon={faCopy} style={{ width: 24 }} />
         </ListItemIcon>
         <ListItemText primary="Form Elements" />
+        <ListItemIcon style={{ minWidth: 36 }}>
+          <FontAwesomeIcon icon={faChevronRight} style={{ width: 24 }} />
+        </ListItemIcon>
       </ListItem>
       <ListItem button>
         <ListItemIcon style={{ minWidth: 36 }}>
