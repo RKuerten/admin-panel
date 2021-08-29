@@ -6,6 +6,15 @@ import "./index.css";
 import App from "./App";
 import { CssBaseline } from "@material-ui/core";
 
+declare module "@material-ui/core/styles/createPalette" {
+  interface Palette {
+    rating: Palette['primary'];
+  }
+  interface PaletteOptions {
+    rating: PaletteOptions['primary'];
+  }
+}
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -15,6 +24,9 @@ const theme = createTheme({
     secondary: {
       main: "#FF000A",
     },
+    rating: {
+      main: "#FFAB00",
+    }
   },
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
