@@ -172,7 +172,7 @@ export default function TopBar({ open, handleDrawerOpen }: Props) {
                   "aria-label": "control",
                   style: { marginLeft: 3, color: "white" },
                 }}
-                IconComponent={React.Fragment}
+                IconComponent={"div"}
                 name="control"
                 variant="outlined"
               >
